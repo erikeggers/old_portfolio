@@ -34,6 +34,15 @@ header {
     clear: both;
     content: "";
     display: table; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+    header {
+      max-width: 4;
+      margin-left: auto;
+      margin-right: auto; }
+      header::after {
+        clear: both;
+        content: "";
+        display: table; } }
   header h1 {
     float: left;
     display: block;

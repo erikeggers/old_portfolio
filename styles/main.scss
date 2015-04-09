@@ -52,6 +52,10 @@ header {
   @include outer-container(80%);
   height: 100px;
   color: $secondary-color;
+  
+    @include hidpi(3.0) {
+    @include outer-container(4);
+  }
 
   h1 {
     @include span-columns(4);
