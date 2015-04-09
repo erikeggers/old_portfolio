@@ -1,0 +1,465 @@
+@import 'bourbon/bourbon';
+$gutter: em(50px);
+$visual-grid: false;
+@import 'neat/neat';
+
+///////////////////////////////////////////////////////////////////////////////////
+//Breakpoints
+
+$mobile-size: 768px;
+$tablet-size-min: 769px;
+$tablet-size-max: 992px;
+$desktop-size: 992px;
+
+$mobile: new-breakpoint(max-width $mobile-size 4);
+$tablet: new-breakpoint(min-width $tablet-size-min max-width $tablet-size-max);
+$desktop: new-breakpoint(min-width $desktop-size);
+///////////////////////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////////////////////////////////////////////////////
+$puerto-rico: #2BC8AE;
+$gray: #959595;
+$off-white: #e8e8e8;
+$base-font: 'Helvetica Neue', Helvetica, sans-serif;
+$header-link: gray;
+$base-color: $puerto-rico;
+$secondary-color: $off-white;
+$base-border-radius: 3px !default;
+$large-screen: em(860) !default;
+///////////////////////////////////////////////////////////////////////////////////
+
+body {
+  margin: auto;
+  font-family: $base-font;
+  -webkit-font-smoothing: subpixel-antialiased;
+  letter-spacing: 1.5px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 100;
+  color: $base-color;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 23px;
+}
+
+header {
+  @include outer-container(80%);
+  height: 100px;
+  color: $secondary-color;
+
+  h1 {
+    @include span-columns(4);
+    margin-top: 18px;
+    color: $secondary-color;
+    font-family: $base-font;
+    font-size: 35px;
+    font-weight: 100;
+    
+    @include media($mobile) {
+      @include span-columns(4);
+      text-align: center;
+    }
+
+  }
+
+  ul {
+    float: right;
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+    
+      @include media($mobile) {
+        margin: 0px;
+        float: none;
+        text-align: center;
+      }
+
+    li {
+      display: inline-block;
+      font-family: $base-font;
+      font-weight: 100;
+      font-size: 20px;
+      letter-spacing: 1px;
+      
+      @include media($mobile) {
+        @include span-columns(4);
+        margin-bottom: 15px;
+        text-align: center;
+        
+        &:first-child {
+          margin-top: 20px;
+        }
+        
+        &:last-child {
+          margin-bottom: 40px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: $header-link;
+        border-radius: 5px;
+        padding: 15px 30px;
+      }
+
+      a:hover {
+        color: $secondary-color;
+        background-color: $base-color;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: background-color .5s;
+      }
+    }
+  }
+}
+
+
+.hero {
+
+  $hero-color: #efefef;
+  $hero-image: '../images/tunnel.jpeg';
+
+  @include background(url($hero-image), no-repeat scroll);
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 10em;
+  
+
+  .hero-inner {
+    @include outer-container(80%);
+    @include clearfix;
+    color: $hero-color;
+    margin: auto;
+    padding: 3.5em;
+    text-align: center;
+
+    .hero-copy {
+      text-align: center;
+
+      h1 {
+        font-weight: 100;
+        font-size: 1.6em;
+        margin-bottom: 0.5em;
+        color: $base-color;
+
+        @include media($large-screen) {
+          font-size: 4.0em;
+        }
+      }
+
+      p {
+        font-weight: 100;
+        margin: 0 auto 3em auto;
+        letter-spacing: 1px;
+
+        @include media($large-screen) {
+          font-size: 1.1em;
+          max-width: 40%;
+          letter-spacing: 1px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: $base-color;
+        border-radius: 5px;
+        padding: 15px 30px;
+        border: 1px solid $base-color;
+        font-family: $base-font;
+        font-weight: 100;
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+
+      a:hover {
+        color: $secondary-color;
+        background-color: $base-color;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: background-color .5s;
+      }
+    }
+  }
+}
+
+.about-containter {
+  background-color: #222;
+  color: $secondary-color;
+  font-family: $base-font;
+  font-weight: 100;
+
+  .row {
+    @include outer-container(80%);
+    
+    svg {
+      margin: 0 auto;
+      margin-top: 60px;
+      display: block;
+      
+      @include media($mobile) {
+        margin-top: 30px;
+      } 
+    }
+    
+    h2 {
+      margin-top: 60px;
+    }
+    
+    .p-height {
+      height: 185px;
+    }
+  
+    .what-i-do {
+      @include span-columns(4);
+      
+      @include media($mobile) {
+        @include span-columns(4);
+      }
+    }
+  
+    .what-i-love {
+      @include span-columns(4);
+      
+      @include media($mobile) {
+        @include span-columns(4);
+      }
+    }
+  
+    .where-i-reside {
+      @include span-columns(4);
+      
+      @include media($mobile) {
+        @include span-columns(4);
+      }
+    }
+    
+    .what-i-know {
+      @include span-columns(6);
+      
+      @include media($mobile) {
+        @include span-columns(4);
+      }
+    }
+  }
+  
+  .row-one {
+    padding-bottom: 60px;
+    border-bottom: 1px solid #2E2D2E;
+  }
+  
+  .row-two {
+    padding-bottom: 60px;
+    border-bottom: 1px solid #2E2D2E;
+    
+    h3 {
+      font-weight: 200;
+    }
+    
+    ul {
+      @include span-columns(6);
+      margin-top: 60px;
+      list-style: none;
+      padding: 0;  
+      
+        @include media($mobile) {
+          @include span-columns(4);
+          margin-top: 30px;
+        }
+      
+      li {
+        color: $secondary-color;
+        margin: 5px;
+        padding: 5px;
+        background-color: #2E2C2E;
+        border-radius: 5px;
+        font-weight: 200;
+      }
+      
+      div {
+        display: inline-block;
+        background-color: $base-color;
+        height: auto;
+        border-radius: 5px;
+        padding: 4px 11px;
+        
+        &.html-css {
+          width: 95%;
+        }
+        
+        &.sass {
+          width: 80%;
+        }
+        
+        &.bourbon {
+          width: 75%;
+        }
+
+        &.bootstrap {
+          width: 50%
+        }
+
+        &.jq-js {
+          width: 85%;
+        }
+
+        &.ajax{
+          width: 90%;
+        }
+
+        &.underscore {
+          width: 80%;
+        }
+
+        &.backbone {
+          width: 50%;
+        }
+
+        &.ember {
+          width: 70%;
+        }
+
+        &.adobe {
+          width: 58%;
+        }
+
+        &.sketch {
+          width: 40%;
+        }
+      }
+    }
+  }
+}
+
+.work-header-container {
+  background-color: #222;
+}
+
+.work-container {
+  background-color: #222;
+  
+  .work-row {
+    @include outer-container(80%);
+    padding-bottom: 30px;
+    border-bottom: 1px solid #2E2D2E;
+
+    
+    .work {
+      @include span-columns(4);
+      
+      p {
+        display: inline-block;
+        color: $secondary-color;
+      }
+      
+      .work-p-height {
+        margin-bottom: 60px;
+      }
+      
+      a {
+        text-decoration: none;
+        color: $base-color;
+        border-radius: 5px;
+        padding: 15px 30px;
+        font-family: $base-font;
+        font-weight: 100;
+        font-size: 20px;
+        letter-spacing: 1px;
+      }
+
+      a:hover {
+        color: $secondary-color;
+        background-color: $base-color;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: background-color .5s;
+      }
+    }
+    
+    img {
+      @include span-columns(8);
+      padding-left: 20px;
+      margin-top: 30px;
+    } 
+  } 
+}
+
+.contact-containter {
+  background-color: #222;
+  
+  .lets-connect {
+    margin-top: 60px;
+  }
+  
+  p {
+    color: $secondary-color;
+  }
+  
+  .row {
+    @include outer-container(80%);
+  }
+  
+  .contact {
+    @include span-columns(6);
+    
+    @include media($mobile) {
+      @include span-columns(4);
+    }
+    
+   i {
+    margin: 10px;
+    font-size: 3.6em;
+    width: 1.6em;
+    color: $base-color;
+     
+      @include media($mobile) {
+        margin: 5px;
+        text-align: center;
+      }
+     
+     &:hover {
+      color: $secondary-color;
+     }
+    }
+  }
+  
+  .connect {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+    
+    @include media($mobile) {
+      font-size: 20px;
+      margin-bottom: 0px;
+    }
+    
+    &:first-child{
+      padding-top: 30px;
+      
+      @include media($mobile) {
+        padding-top: 8px;
+      }
+    }
+    
+    a {
+      text-decoration: none;
+      color: $base-color;
+    }
+  }
+  
+  .row-one {
+    border-bottom: 1px solid #2E2D2E;
+    padding-bottom: 20px;
+  }
+  
+  .row-two {
+    padding-bottom: 20px;
+  }
+}
