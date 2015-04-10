@@ -424,13 +424,24 @@ header {
     .contact-containter .contact i {
       margin: 10px;
       font-size: 3.6em;
-      width: 1.6em;
+      width: 1.4em;
       color: #2BC8AE; }
+      .contact-containter .contact i.fa-medium {
+        margin-top: 25px;
+        font-size: 2.8em; }
       @media screen and (max-width: 768px) {
         .contact-containter .contact i {
-          margin: 5px;
-          font-size: 2.6em;
-          text-align: center; } }
+          float: left;
+          display: block;
+          margin-right: 11.87391%;
+          width: 44.06304%;
+          font-size: 4em;
+          text-align: center; }
+          .contact-containter .contact i:last-child {
+            margin-right: 0; }
+          .contact-containter .contact i.fa-medium {
+            margin-top: 20px;
+            font-size: 3.5em; } }
       .contact-containter .contact i:hover {
         color: #e8e8e8; }
   .contact-containter .connect {
