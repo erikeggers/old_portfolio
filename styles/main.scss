@@ -138,7 +138,11 @@ header {
     margin: auto;
     padding: 3.5em;
     text-align: center;
-
+    
+    @include media($mobile) {
+      @include outer-container(100%);
+    }
+    
     .hero-copy {
       text-align: center;
 
@@ -160,7 +164,7 @@ header {
 
         @include media($large-screen) {
           font-size: 1.1em;
-          max-width: 40%;
+          max-width: 60%;
           letter-spacing: 1px;
         }
       }
@@ -175,6 +179,11 @@ header {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 1px;
+        
+        @include media($mobile) {
+          width: flex-grid(5, 8) + flex-gutter(8);        
+        
+        }
       }
 
       a:hover {
@@ -212,7 +221,7 @@ header {
     }
     
     .p-height {
-      height: 185px;
+      min-height: 185px;
     }
   
     .what-i-do {
@@ -437,6 +446,7 @@ header {
      
       @include media($mobile) {
         margin: 5px;
+        font-size: 2.6em;
         text-align: center;
       }
      

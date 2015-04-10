@@ -121,6 +121,15 @@ header {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (max-width: 768px) {
+      .hero .hero-inner {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto; }
+        .hero .hero-inner::after {
+          clear: both;
+          content: "";
+          display: table; } }
     .hero .hero-inner .hero-copy {
       text-align: center; }
       .hero .hero-inner .hero-copy h1 {
@@ -138,7 +147,7 @@ header {
         @media screen and (min-width: 53.75em) {
           .hero .hero-inner .hero-copy p {
             font-size: 1.1em;
-            max-width: 40%;
+            max-width: 60%;
             letter-spacing: 1px; } }
       .hero .hero-inner .hero-copy a {
         text-decoration: none;
@@ -150,6 +159,9 @@ header {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 1px; }
+        @media screen and (max-width: 768px) {
+          .hero .hero-inner .hero-copy a {
+            width: 66.00265%; } }
       .hero .hero-inner .hero-copy a:hover {
         color: #e8e8e8;
         background-color: #2BC8AE;
@@ -180,7 +192,7 @@ header {
     .about-containter .row h2 {
       margin-top: 60px; }
     .about-containter .row .p-height {
-      height: 185px; }
+      min-height: 185px; }
     .about-containter .row .what-i-do {
       float: left;
       display: block;
@@ -417,6 +429,7 @@ header {
       @media screen and (max-width: 768px) {
         .contact-containter .contact i {
           margin: 5px;
+          font-size: 2.6em;
           text-align: center; } }
       .contact-containter .contact i:hover {
         color: #e8e8e8; }
