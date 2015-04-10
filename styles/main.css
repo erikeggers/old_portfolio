@@ -182,6 +182,15 @@ header {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (max-width: 768px) {
+      .about-containter .row {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto; }
+        .about-containter .row::after {
+          clear: both;
+          content: "";
+          display: table; } }
     .about-containter .row svg {
       margin: 0 auto;
       margin-top: 60px;
@@ -273,11 +282,18 @@ header {
         margin-right: 0; }
       @media screen and (max-width: 768px) {
         .about-containter .row-two ul {
+          max-width: 100%;
+          margin-left: auto;
+          margin-right: auto;
           float: left;
           display: block;
           margin-right: 11.87391%;
           width: 100%;
           margin-top: 30px; }
+          .about-containter .row-two ul::after {
+            clear: both;
+            content: "";
+            display: table; }
           .about-containter .row-two ul:last-child {
             margin-right: 0; } }
       .about-containter .row-two ul li {
@@ -331,6 +347,15 @@ header {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (max-width: 768px) {
+      .work-container .work-row {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto; }
+        .work-container .work-row::after {
+          clear: both;
+          content: "";
+          display: table; } }
     .work-container .work-row .work {
       float: left;
       display: block;
@@ -406,6 +431,15 @@ header {
       clear: both;
       content: "";
       display: table; }
+    @media screen and (max-width: 768px) {
+      .contact-containter .row {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto; }
+        .contact-containter .row::after {
+          clear: both;
+          content: "";
+          display: table; } }
   .contact-containter .contact {
     float: left;
     display: block;

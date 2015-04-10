@@ -206,6 +206,10 @@ header {
   .row {
     @include outer-container(80%);
     
+    @include media($mobile) {
+      @include outer-container(90%);
+    }
+    
     svg {
       margin: 0 auto;
       margin-top: 60px;
@@ -275,8 +279,9 @@ header {
       margin-top: 60px;
       list-style: none;
       padding: 0;  
-      
+
         @include media($mobile) {
+          @include outer-container(100%);
           @include span-columns(4);
           margin-top: 30px;
         }
@@ -357,6 +362,10 @@ header {
     padding-bottom: 30px;
     border-bottom: 1px solid #2E2D2E;
     
+    @include media($mobile) {
+      @include outer-container(90%);
+    }
+    
     .work {
       @include span-columns(4);
       
@@ -428,6 +437,10 @@ header {
   
   .row {
     @include outer-container(80%);
+    
+    @include media($mobile) {
+      @include outer-container(90%);
+    }
   }
   
   .contact {
