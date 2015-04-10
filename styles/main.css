@@ -87,7 +87,7 @@ header {
             margin-bottom: 40px; } }
       header ul li a {
         text-decoration: none;
-        color: gray;
+        color: #959595;
         border-radius: 5px;
         padding: 15px 30px; }
       header ul li a:hover {
@@ -104,7 +104,7 @@ header {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 10em; }
+  padding-bottom: 8em; }
   .hero .hero-inner {
     max-width: 80%;
     margin-left: auto;
@@ -339,6 +339,9 @@ header {
         color: #e8e8e8; }
       .work-container .work-row .work .work-p-height {
         margin-bottom: 60px; }
+        @media screen and (max-width: 768px) {
+          .work-container .work-row .work .work-p-height {
+            margin-bottom: 30px; } }
       .work-container .work-row .work a {
         text-decoration: none;
         color: #2BC8AE;
@@ -348,6 +351,10 @@ header {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 1px; }
+        @media screen and (max-width: 768px) {
+          .work-container .work-row .work a {
+            display: block;
+            text-align: center; } }
       .work-container .work-row .work a:hover {
         color: #e8e8e8;
         background-color: #2BC8AE;

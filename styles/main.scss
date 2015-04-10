@@ -22,7 +22,7 @@ $puerto-rico: #2BC8AE;
 $gray: #959595;
 $off-white: #e8e8e8;
 $base-font: 'Helvetica Neue', Helvetica, sans-serif;
-$header-link: gray;
+$header-link: $gray;
 $base-color: $puerto-rico;
 $secondary-color: $off-white;
 $base-border-radius: 3px !default;
@@ -129,7 +129,9 @@ header {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 10em;
+  padding-bottom: 8em;
+  
+  
   
 
   .hero-inner {
@@ -364,6 +366,10 @@ header {
       
       .work-p-height {
         margin-bottom: 60px;
+        
+        @include media($mobile) {
+          margin-bottom: 30px;
+        }
       }
       
       a {
@@ -375,6 +381,11 @@ header {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 1px;
+        
+        @include media($mobile) {
+          display: block;
+          text-align: center;
+        }
       }
 
       a:hover {
