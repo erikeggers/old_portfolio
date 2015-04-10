@@ -131,9 +131,6 @@ header {
   background-size: cover;
   padding-bottom: 8em;
   
-  
-  
-
   .hero-inner {
     @include outer-container(80%);
     @include clearfix;
