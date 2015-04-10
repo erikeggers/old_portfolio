@@ -34,15 +34,6 @@ header {
     clear: both;
     content: "";
     display: table; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min--moz-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3 / 1), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
-    header {
-      max-width: 4;
-      margin-left: auto;
-      margin-right: auto; }
-      header::after {
-        clear: both;
-        content: "";
-        display: table; } }
   header h1 {
     float: left;
     display: block;
@@ -335,6 +326,14 @@ header {
       width: 30.88824%; }
       .work-container .work-row .work:last-child {
         margin-right: 0; }
+      @media screen and (max-width: 768px) {
+        .work-container .work-row .work {
+          float: left;
+          display: block;
+          margin-right: 11.87391%;
+          width: 100%; }
+          .work-container .work-row .work:last-child {
+            margin-right: 0; } }
       .work-container .work-row .work p {
         display: inline-block;
         color: #e8e8e8; }
@@ -364,6 +363,15 @@ header {
       margin-top: 30px; }
       .work-container .work-row img:last-child {
         margin-right: 0; }
+      @media screen and (max-width: 768px) {
+        .work-container .work-row img {
+          float: left;
+          display: block;
+          margin-right: 11.87391%;
+          width: 100%;
+          padding-left: 0; }
+          .work-container .work-row img:last-child {
+            margin-right: 0; } }
 
 .contact-containter {
   background-color: #222; }
