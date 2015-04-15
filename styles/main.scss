@@ -374,7 +374,7 @@ header {
       }
       
       p {
-        display: inline-block;
+        display: block;
         color: $secondary-color;
       }
       
@@ -455,7 +455,6 @@ header {
     font-size: 3em;
     width: 1.4em;
     color: $base-color;
-     
      
       @include media($mobile) {
         @include span-columns(2);

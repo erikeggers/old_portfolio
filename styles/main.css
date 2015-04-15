@@ -372,7 +372,7 @@ header {
           .work-container .work-row .work:last-child {
             margin-right: 0; } }
       .work-container .work-row .work p {
-        display: inline-block;
+        display: block;
         color: #e8e8e8; }
       .work-container .work-row .work .work-p-height {
         margin-bottom: 60px; }
