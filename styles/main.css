@@ -134,20 +134,23 @@ header {
       text-align: center; }
       .hero .hero-inner .hero-copy h1 {
         font-weight: 100;
-        font-size: 1.6em;
+        font-size: 4.0em;
         margin-bottom: 0.5em;
-        color: #2BC8AE; }
-        @media screen and (min-width: 53.75em) {
+        color: #2BC8AE;
+        animation-delay: .5s;
+        -webkit-animation-delay: .5s; }
+        @media screen and (max-width: 768px) {
           .hero .hero-inner .hero-copy h1 {
-            font-size: 4.0em; } }
+            font-size: 1.8em; } }
       .hero .hero-inner .hero-copy p {
-        font-weight: 100;
         margin: 0 auto 3em auto;
-        letter-spacing: 1px; }
-        @media screen and (min-width: 53.75em) {
+        max-width: 60%;
+        font-size: 1.1em;
+        font-weight: 100; }
+        @media screen and (max-width: 768px) {
           .hero .hero-inner .hero-copy p {
-            font-size: 1.1em;
-            max-width: 60%;
+            max-width: 85%;
+            font-size: 14px;
             letter-spacing: 1px; } }
       .hero .hero-inner .hero-copy a {
         text-decoration: none;
@@ -159,9 +162,6 @@ header {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 1px; }
-        @media screen and (max-width: 768px) {
-          .hero .hero-inner .hero-copy a {
-            width: 66.00265%; } }
       .hero .hero-inner .hero-copy a:hover {
         color: #e8e8e8;
         background-color: #2BC8AE;

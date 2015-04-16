@@ -26,7 +26,6 @@ $header-link: $gray;
 $base-color: $puerto-rico;
 $secondary-color: $off-white;
 $base-border-radius: 3px !default;
-$large-screen: em(860) !default;
 ///////////////////////////////////////////////////////////////////////////////////
 
 body {
@@ -148,23 +147,26 @@ header {
 
       h1 {
         font-weight: 100;
-        font-size: 1.6em;
+        font-size: 4.0em;
         margin-bottom: 0.5em;
         color: $base-color;
+        animation-delay: .5s;
+        -webkit-animation-delay: .5s;
 
-        @include media($large-screen) {
-          font-size: 4.0em;
+        @include media($mobile) {
+          font-size: 1.8em;
         }
       }
 
       p {
-        font-weight: 100;
         margin: 0 auto 3em auto;
-        letter-spacing: 1px;
+        max-width: 60%;
+        font-size: 1.1em;
+        font-weight: 100;
 
-        @include media($large-screen) {
-          font-size: 1.1em;
-          max-width: 60%;
+        @include media($mobile) {
+          max-width: 85%;
+          font-size: 14px; 
           letter-spacing: 1px;
         }
       }
@@ -179,11 +181,6 @@ header {
         font-weight: 100;
         font-size: 20px;
         letter-spacing: 1px;
-        
-        @include media($mobile) {
-          width: flex-grid(5, 8) + flex-gutter(8);        
-        
-        }
       }
 
       a:hover {
