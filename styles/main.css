@@ -98,8 +98,8 @@ header {
         transition: background-color .5s; }
 
 .hero {
-  background: url("../images/tunnel.jpeg"), no-repeat scroll;
-  background: url("../images/tunnel.jpeg"), no-repeat scroll;
+  background: url("../images/tunnel-min.jpeg"), no-repeat scroll;
+  background: url("../images/tunnel-min.jpeg"), no-repeat scroll;
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
@@ -150,8 +150,7 @@ header {
         @media screen and (max-width: 768px) {
           .hero .hero-inner .hero-copy p {
             max-width: 85%;
-            font-size: 14px;
-            letter-spacing: 1px; } }
+            font-size: 14px; } }
       .hero .hero-inner .hero-copy a {
         text-decoration: none;
         color: #2BC8AE;

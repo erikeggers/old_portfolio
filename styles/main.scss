@@ -121,7 +121,7 @@ header {
 .hero {
 
   $hero-color: #efefef;
-  $hero-image: '../images/tunnel.jpeg';
+  $hero-image: '../images/tunnel-min.jpeg';
 
   @include background(url($hero-image), no-repeat scroll);
   background-attachment: fixed;
@@ -167,7 +167,6 @@ header {
         @include media($mobile) {
           max-width: 85%;
           font-size: 14px; 
-          letter-spacing: 1px;
         }
       }
 
