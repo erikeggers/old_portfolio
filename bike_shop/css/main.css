@@ -1,0 +1,719 @@
+/* Bike Shop CSS
+==================================================================================================== */
+
+
+/* Defaults
+==================================================================================================== */
+html {
+	font-size: 62.5%;
+}
+
+body {
+    font: 1.6rem/1.5 "Program OT", Arial, sans-serif;
+    color: #888888;
+    background: #111111;
+}
+
+/* Typography
+==================================================================================================== */
+
+h2 em, h3, h4 {
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2.6rem;
+    color: #888888;
+    text-transform: uppercase;
+}
+
+h2 em {
+    font-size: 3.6rem;
+    color: #FFFFFF;
+    display: block;
+}
+
+h3 {
+    font-size: 2.0rem;
+    color: #DDDDDD;
+}
+
+h4 {
+    font-size: 1.6rem;
+    color: #FFFFFF;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+a {
+    color: #C0392B;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+/* Base Structure
+==================================================================================================== */
+header {
+    border-top: 4px solid #C0392B;
+    position: relative;
+}
+
+header, #quickLinks, #benefits {
+    background: #444444;
+    height: 4.5rem;
+}
+
+
+nav, .wrapper {
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header h1 img {
+    position: absolute;
+    height: 5rem;
+    left: 20rem;
+}
+
+/* Section: Buttons
+==================================================================================================== */
+button, input[type="submit"] {
+   padding: 1rem 2rem;
+   background-color: #C0392B;
+   font-size: 1.4rem;
+   color: #FFFFFF;
+   font-weight: 900;
+   text-transform: uppercase;
+}
+
+
+/* Nav
+==================================================================================================== */
+
+nav {
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    left: 0rem;
+    z-index: 10;
+}
+
+nav a {
+    display: block;
+    padding: 1rem 2rem;
+    color: #999999;
+    background-color: rgba(17,17,17,0.85);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 900;
+}
+
+nav a:hover {
+    background-color: rgba(17,17,17,1);
+    color: #DDDDDD;
+}
+
+nav li:last-of-type a::before {
+    content: url("../images/cart.png");
+    padding-right: 0.3rem;
+}
+
+nav li:last-of-type a {
+    text-align: center;
+    background-color: #C0392B;
+    color: #FFFFFF;
+    height: 5.0rem;
+}
+
+nav li {
+    display: inline-block;
+}
+
+/* Section: Call to action
+==================================================================================================== */
+#cta {
+    height: 45.0rem;
+    background-image: url("../images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#cta h1 {
+   position: absolute;
+   top: 50%;
+   transform: translate(0, -50%);
+}
+
+/* Section: Quick Links
+==================================================================================================== */
+#quickLinks {
+    padding: 5.0rem;
+    height: 30.0rem;
+    text-align: center;
+}
+
+#quickLinks ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#quickLinks li {
+    height: 20.0rem;
+    width: calc(100%/3);
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#quickLinks li h2 {
+    margin-top: 6.0rem;
+    margin-bottom: 2.0rem;
+    padding: 0.5rem;
+    background-color: rgba(17,17,17,0.50);
+}
+
+#quickLinks li:nth-child(1) {
+    background-image: url("../images/bikes.jpg");
+}
+
+#quickLinks li:nth-child(2) {
+    background-image: url("../images/speedometer.jpg");
+}
+
+#quickLinks li:nth-child(3) {
+    background-image: url("../images/gears.jpg");
+}
+
+/* Section: Products
+==================================================================================================== */
+#featuredProducts {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background: #FFFFFF;
+}
+
+#featuredProducts .wrapper {
+    width: 100%;
+}
+
+#featuredProducts h2 {
+    color: #666666;
+}
+
+#featuredProducts h2 em, h4 {
+    color: #111111;
+}
+
+#featuredProducts h3 {
+    color: #444444;
+}
+
+#featuredProducts li {
+    width: calc(100%/4);
+    height: 46.5rem;
+    margin-bottom: 3.0rem;
+    float: left;
+}
+
+#featuredProducts li:hover {
+    border: 1px solid gray;
+}
+
+#featuredProducts ul::after {
+    content: "";
+    display:block;
+    clear:both;
+}
+
+.ratingsContainer {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 10.0rem;
+    height: 1.8rem;
+    background: url("../images/ratings.png") 0px -1005px;
+    background-size: 10.0rem;
+}
+.productImageWrapper {
+    width: 25.0rem;
+    height: 25.0rem;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.productImageWrapper img {
+    object-fit: cover;
+    width: 25.0rem;
+    height: 25.0rem;
+    filter: grayscale(100%);
+}
+
+.productImageWrapper img:hover {
+    filter: grayscale(0%);
+}
+
+.productImageWrapper img, #featuredProducts h3, #featuredProducts a, #featuredProducts p {
+    text-align: left;
+    padding: 0.5rem;
+}
+
+
+/* Section: Member Benefits
+==================================================================================================== */
+#benefits {
+    height: 43rem;
+    padding: 5rem;
+    position: relative;
+    background: #111111;
+    text-align: center;
+}
+
+#benefits::before {
+    position: absolute;
+    content:"";
+    display: block;
+    background-image: url("../images/gears.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top:0px;
+    left: 0px;
+    z-index: 1;
+    width:100%;
+    height:100%;
+    opacity: 0.2;
+}
+
+#benefits section {
+    position: relative;
+    width: calc(100%/3);
+    padding-top:12rem;
+    float: left;
+    z-index: 2;
+}
+
+#benefits .wrapper::after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+#benefits section:nth-of-type(1) {
+    background: url("../images/truck.png");
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+#benefits section:nth-of-type(2) {
+    background: url("../images/wrench.png");
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+#benefits section:nth-of-type(3) {
+    background: url("../images/envelope.png");
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+#benefits section input {
+    margin-top: 1rem;
+    padding: 0.8rem;
+}
+
+/* Section: Contact
+==================================================================================================== */
+.contact {
+    background: #FFFFFF;
+    padding-top: 8em;
+    padding-bottom:8rem;
+}
+
+.map {
+    width: 80.0rem;
+    margin: auto;
+}
+
+form, .contact h2  {
+    width: 115.0rem;
+    margin: auto;
+}
+
+.contact h2  {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: #666666;
+}
+
+.contact::after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+form label {
+    text-transform: uppercase;
+    color: #666666;
+}
+
+form input, form textarea {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #DDDDDD;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact form input[type="text"], .contact input[type="email"], .contact input[type="tel"] {
+    width:60rem;
+    margin-right: 5rem;
+}
+
+form input::placeholder, form textarea::placeholder  {
+    font-style: italic;
+    color: #666666;
+}
+
+.info {
+    float: left;
+}
+
+.message, input[type="submit"] {
+    float: right;
+    margin-right: 4rem;
+}
+
+#nameFeedback,
+#emailFeedback,
+#msgFeedback {
+    color: #C0392B;
+}
+
+/* Blog Posts
+==================================================================================================== */
+.blogWrapper {
+    background-color: #FFFFFF;
+    margin: auto;
+}
+
+.blogWrapper::after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+#blogPosts {
+    padding: 5rem;
+    margin-right: 8rem;
+    width: 85.0rem;
+    float: left;
+}
+
+#blogPosts h2, #blogPosts p {
+    color: #666666;
+    padding-bottom: 4rem;
+    width: 85.0rem;
+}
+
+#blogPosts h3 {
+    color: #444444;
+    padding-top: 4rem;
+    text-align: center;
+}
+
+#blogPosts img {
+    width: 85.0rem;
+}
+
+aside {
+    display:inline-block;
+    margin-top: 13rem;
+}
+
+aside ul {
+    padding: 1rem;
+    margin-bottom: 3.0rem;
+    border: 1px solid #DDDDDD;
+    outline: 1px solid #DDDDDD;
+    outline-offset: 0.3rem;
+}
+
+aside ul ul {
+    border: none;
+    outline: none;
+}
+
+aside > ul > li > p {
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+}
+
+
+aside ul:nth-child(2) ol li {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid #DDDDDD;
+}
+
+aside input {
+    width: 30.0rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #DDDDDD;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+aside ul:last-of-type p{
+    display: block;
+    padding-bottom: 1.0rem;
+    padding-top: 1.0rem;
+}
+
+aside ul:last-of-type p:last-of-type {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+aside ul:last-of-type p:first-of-type,
+aside ul:nth-child(2) ol li:last-of-type {
+    border-bottom: none;
+}
+
+/* Shop
+==================================================================================================== */
+#products ul li {
+    text-align: center;
+    height: 30rem;
+}
+
+#products ul li:first-of-type {
+    background: url("../images/backpack.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#products ul li:nth-child(2) {
+    background: url("../images/speedometer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#products ul li:nth-child(3) {
+    background: url("../images/bikes.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#products ul li:nth-child(4) {
+    background: url("../images/gears.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#products ul li:nth-child(2),
+#products ul li:nth-child(3) {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 50%;
+}
+
+
+#products ul li:nth-child(3){
+    float: right;
+}
+
+#products h3 {
+    padding-top: 15rem;
+    color: #444444;
+}
+
+/* Club Events
+==================================================================================================== */
+#clubEvents,
+#leaders,
+#schedule {
+    background: #FFFFFF;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+}
+
+#clubEvents h2,
+#leaders h2,
+#schedule h2 {
+    text-align: center;
+    color: #666666;
+}
+
+#clubEvents h3,
+#clubEvents p,
+#leaders h3,
+#leaders p,
+#schedule tr {
+    color: #444444;
+}
+
+#clubEvents h3,
+#leaders h3 {
+    padding-bottom: 1rem;
+}
+
+#clubEvents ul,
+#leaders ul {
+    margin: auto;
+    width: 800px;
+}
+
+#clubEvents::after,
+#leaders::after,
+#schedule::after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+#clubEvents ul li,
+#leaders ul li {
+    width: calc(100%/3);
+    padding-top:12rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    float: left;
+}
+
+#leaders em {
+    color: #111111;
+}
+
+#leaders img {
+    width: 10.0rem;
+    border-radius: 50%;
+    margin-bottom: 1.0rem;
+    margin-left: 5rem;
+}
+
+#schedule h2 {
+    padding-bottom: 3.0rem;
+}
+
+#schedule table {
+    width: 1200px;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 5.0rem 0;
+}
+
+#date {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+#title th {
+    border: 1px solid #DDDDDD;
+    padding: 2.0rem;
+}
+
+
+/* Footer
+==================================================================================================== */
+footer ul {
+    font-size: 1.4rem;
+    float: left;
+    padding-top: 8rem;
+    padding-right: 5rem;
+}
+
+footer::after {
+    content:"";
+    display: block;
+    clear: both;
+}
+
+footer a {
+    color: #888888;
+    text-decoration: none;
+    font-weight: 100;
+}
+
+
+footer ul li {
+    padding: 0.5rem;
+}
+
+footer ul:nth-child(1) li a,
+footer ul:nth-child(2) li:nth-child(1),
+footer ul:nth-child(3) li:nth-child(-n+2),
+footer ul:nth-child(3) li:nth-child(-n+2) a,
+.social li:nth-child(1) {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.copyright {
+    width: 100%;
+}
+
+.copyright li, p {
+    display: inline-block;
+}
+
+.copyright li:not(:first-child) {
+    display: inline-block;
+    text-align: right;
+}
+
+.social {
+    float: right;
+}
+
+.social li {
+    display: inline-block;
+}
+
+.social li:nth-child(1) {
+    display: block;
+    text-align: right;
+}
+
+.social a {
+    display: block;
+    text-indent: -99999px;
+    width: 3rem;
+    height: 3rem;
+    opacity: 0.3;
+}
+
+.social a:hover {
+    opacity: 1;
+}
+
+.social a[href*='facebook'] {
+    background: url("../images/social.png") 0 0;
+}
+
+.social a[href*='twitter'] {
+    background: url("../images/social.png") -30px 0;
+}
+
+.social a[href*='youtube'] {
+    background: url("../images/social.png") -60px 0;
+}
+
+.social a[href*='google'] {
+    background: url("../images/social.png") -90px 0;
+}
+
+.social a[href*='instagram'] {
+    background: url("../images/social.png") -120px 0;
+}
